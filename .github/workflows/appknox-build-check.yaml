@@ -29,6 +29,6 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: build-output
-          path: src/ClientApp/bin/Release/net10.0-android/*-Signed.apk
+          path: src/ClientApp/bin/**/*.apk
           if-no-files-found: error
           retention-days: 14

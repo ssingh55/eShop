@@ -25,7 +25,7 @@ jobs:
       - name: Install the Android MAUI workload
         run: dotnet workload install android maui-android
       - name: Build (build only, no tests, no run)
-        run: dotnet build src/ClientApp/ClientApp.csproj -f net10.0-android -c Release
+        run: dotnet publish src/ClientApp/ClientApp.csproj -f net10.0-android -c Release -p:AndroidPackageFormat=apk
       - uses: actions/upload-artifact@v4
         with:
           name: build-output
